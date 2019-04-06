@@ -1,38 +1,5 @@
 "use strict";
 
-/*
-function resize () {
-	const h = Math.floor(window.innerWidth * (9/16));
-	const mh = Math.floor((window.innerHeight - h)/2);
-
-	$('[data-screen="game"]').css({
-		backgroundColor: "#333",
-		width: "100%",
-		height: h + "px",
-		marginTop: mh + "px",
-		backgroundSize: "contains",
-		position: "relative"
-	});
-
-}
-
-
-$(document).ready(function () {
-	resize();
-
-	const textBox = $('[data-ui="text"]');
-	const quickMenu = $('[data-ui="quick-menu"]');
-
-	textBox.remove();
-	quickMenu.remove();
-
-	$("body").append(quickMenu);
-	$("body").append(textBox);
-
-	$(window).resize(resize);
-});
-*/
-
 // The game starts here.
 monogatari.script({"Start":[
 	// "show scene lobby with fadeIn",

@@ -2,7 +2,7 @@
 
 monogatari.script({"Interview": [
 	"show scene bossOffice with fadeIn",
-	"show character boss Normal left with lightSpeedIn",
+	"show character boss Normal bottom left with lightSpeedIn",
 	"boss:Normal Hi {{player.name}}, before we begin, let me tell you what we do here on 'The Coorporation' ...",
 	"brain:Happy Yeah, finally, the job description only said 'We are hiring, The coorporation.', maybe they had a caracter count limit or something...",
 	"boss:Normal We make money, lots of them, thats what we do and when someone thinks we can't do it, we do it!!!",
