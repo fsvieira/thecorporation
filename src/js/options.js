@@ -53,6 +53,10 @@ monogatari.settings({
 	// The Aspect Ratio your background images are on. This has no effect on
 	// web deployed novels.
 	'AspectRatio': '16:9',
+	
+	// Force aspect ratio, it will make all images to comply with aspect ratio.
+	'ForceAspectRatio': true,
+
 
 	// Enables or disables the typing text animation for the whole game.
 	'TypeAnimation': true,
