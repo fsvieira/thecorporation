@@ -37,7 +37,7 @@ monogatari.script({"Start":[
 	"raquel:Normal You can wait on the meeting room, Mr. Batista will be there soon.",
 	{
 		"Choice": {
-			"Dialog": "brain:Normal Humm..., maybe I should ask her out?",
+			"Dialog": "Humm..., maybe I should ask her out?",
 			"Coffe": {
 				"Text": "Would you like to drink a coupe of Coffe, after the meeting?",
 				"Do": "jump StartAskCoffe"
