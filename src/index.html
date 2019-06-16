@@ -6,12 +6,9 @@
 
 		<title>Monogatari Visual Novel</title> <!--Up to 60-70 Characters. Optimal Format: Primary Keyword - Secondary Keyword | Brand Name-->
 
-		<meta http-equiv="Content-Security-Policy" content="default-src *;
-			img-src * 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' *;
-			style-src  'self' 'unsafe-inline' *">
-
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src 'self' 'unsafe-eval'">
 		<meta name="description" content=""> <!--Page description. No longer than 155 characters.-->
 		<meta name="keywords" content="">
 		<meta name="author" content=""> <!--Name of the author.-->
@@ -75,7 +72,7 @@
 		<!-- Third Party CSS Libraries -->
 
 		<!-- Monogatari CSS Libraries -->
-		<link rel="stylesheet" href="./engine/monogatari.css">
+		<link rel="stylesheet" href="./engine//core/monogatari.css">
 		<link rel="stylesheet" href="./style/main.css">
 
 		<!-- Third Party JavaScript Libraries -->
@@ -83,13 +80,11 @@
 
 
 		<!-- Monogatari JavaScript Libraries -->
-		<script src="./engine/debug.js"></script>
-		<script src="./engine/monogatari.js"></script>
+		<script src="./engine/debug/debug.js"></script>
+		<script src="./engine/core/monogatari.js"></script>
 		<script src="./js/options.js"></script>
 		<script src="./js/storage.js"></script>
 		<script src="./js/script.js"></script>
-		<script src="./js/story/start.js"></script>
-		<script src="./js/story/interview.js"></script>
 		<script src="./js/main.js"></script>
 
 	</head>
@@ -104,7 +99,24 @@
 			</div>
 		</noscript>
 
-		<div id="monogatari"></div>
+		<div id="monogatari">
+			<visual-novel>
+				<loading-screen></loading-screen>
+				<main-screen>
+					<main-menu></main-menu>
+				</main-screen>
+				<game-screen>
+					<dialog-log></dialog-log>
+					<text-box></text-box>
+					<quick-menu></quick-menu>
+				</game-screen>
+				<gallery-screen></gallery-screen>
+				<load-screen></load-screen>
+				<save-screen></save-screen>
+				<settings-screen></settings-screen>
+				<help-screen></help-screen>
+			</visual-novel>
+		</div>
 	</body>
 
 </html>
