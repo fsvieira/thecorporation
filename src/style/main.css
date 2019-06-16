@@ -110,8 +110,13 @@ button:hover {
 
 }
 
+[data-screen="game"] {
+	background-color: rgb(42, 64, 75);
+}
+
 /* Character Images Styles */
 [data-screen="game"] [data-character] {
+	max-height: 70%;
 
 }
 
