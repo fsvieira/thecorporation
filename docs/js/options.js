@@ -50,11 +50,13 @@ monogatari.settings({
 	// Enable service workers; Default: true *
 	'ServiceWorkers': true,
 
-	// The Aspect Ratio your background images are on. This has no effect on
-	// web deployed novels.
+	// The Aspect Ratio your background images are on. This only has effect on
+	// web deployed novels if forceAspectRatio flag is on.
 	'AspectRatio': '16:9',
 
 	// Force aspect ratio, it will make all images to comply with aspect ratio.
+	// Values: 'None' (don't force), 'Visuals' (force only visuals)
+	// or 'Global' (force all game)
 	'ForceAspectRatio': 'Visuals',
 
 	// Enables or disables the typing text animation for the whole game.
@@ -100,7 +102,8 @@ monogatari.settings({
 		'sound': 'sound',
 		'ui': 'ui',
 		'video': 'video',
-		'voice': 'voice'
+		'voice': 'voice',
+		'gallery': 'gallery'
 	},
 
 	// Name of the Splash Screen Label. If a name is given and a label with that
@@ -133,7 +136,8 @@ monogatari.preferences ({
 	'Volume': {
 		'Music': 1,
 		'Voice': 1,
-		'Sound': 1
+		'Sound': 1,
+		'Video': 1
 	},
 
 	// Initial resolution used for Electron, it must match the settings inside

@@ -4,8 +4,7 @@
 monogatari.script({"Start":[
 	// "show scene lobby with fadeIn",
 	"show scene lobby with fadeIn",
-	"show character raquel Normal mystyle bottom with fadeIn",
-	"show image lobbyBalcony bottom right",
+	"show character raquel Normal right with fadeIn",
 	// "particles Snow",
 	"raquel:Normal Hi, how can I help you mister...?",
 	{
@@ -37,7 +36,7 @@ monogatari.script({"Start":[
 	"raquel:Normal You can wait on the meeting room, Mr. Batista will be there soon.",
 	{
 		"Choice": {
-			"Dialog": "brain:Normal Humm..., maybe I should ask her out?",
+			"Dialog": "Humm..., maybe I should ask her out?",
 			"Coffe": {
 				"Text": "Would you like to drink a coupe of Coffe, after the meeting?",
 				"Do": "jump StartAskCoffe"
