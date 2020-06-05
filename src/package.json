@@ -1,7 +1,8 @@
 {
-  "name": "the-corporation",
+  "name": "my-game",
+  "productName": "My Game",
   "version": "0.1.0",
-  "main": "electron.js",
+  "main": "engine/electron/index.js",
   "description": "Is your first job, are strange things happening or is just a normal day at the office?",
   "author": "Filipe Vieira",
   "license": "MIT",
@@ -20,7 +21,11 @@
         "zip"
       ],
       "type": "distribution",
-      "icon": "assets/icons/icon.icns"
+      "icon": "assets/icons/icon.icns",
+      "entitlements": "engine/electron/entitlements.mac.plist",
+      "entitlementsInherit": "engine/electron/entitlements.mac.plist",
+      "hardenedRuntime": true,
+      "gatekeeperAssess": false
     },
     "linux": {
       "category": "Game",
@@ -30,25 +35,25 @@
       "synopsis": "Welcome to the corporation!",
       "description": "Is your first job, are strange things happening or is just a normal day at the office?"
     },
-    "icon": "assets/icons/512x512.png"
+    "icon": "assets/icons/512x512.png",
+    "afterSign": "engine/electron/notarize.js"
   },
   "scripts": {
     "serve": "parcel serve index.html --open",
     "serve:dist": "lite-server ../docs",
     "start": "electron . --enable-logging",
-    "build": "build -mwl",
-    "build:windows": "build -w",
-    "build:mac": "build -m",
-    "build:linux": "build -l",
+    "build": "electron-builder -mwl",
+    "build:windows": "electron-builder -w",
+    "build:mac": "electron-builder -m",
+    "build:linux": "electron-builder -l",
     "build:web": "parcel build index.html",
     "build:github": "parcel build index.html --public-url ./ --out-dir ../docs",
     "publish:itch": "butler push exp fsvieira/the-corporation:html5"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.6",
-    "electron": "^3.0.10",
-    "electron-builder": "^20.38.2",
-    "lite-server": "^2.4.0",
-    "parcel": "^1.12.3"
+    "@babel/core": "^7.8.4",
+    "electron": "^8.0.0",
+    "electron-builder": "^22.3.2",
+    "parcel": "^1.12.4"
   }
 }
