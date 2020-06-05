@@ -1,13 +1,13 @@
 {
-  "name": "my-game",
+  "name": "the-corporation",
   "version": "0.1.0",
   "main": "electron.js",
-  "description": "A description of your game",
-  "author": "Your Name",
+  "description": "Is your first job, are strange things happening or is just a normal day at the office?",
+  "author": "Filipe Vieira",
   "license": "MIT",
   "homepage": "https://example.com",
   "build": {
-    "appId": "com.example.mygame",
+    "appId": "com.fsvieira.thecorporation",
     "win": {
       "target": [
         "nsis"
@@ -27,8 +27,8 @@
       "target": [
         "AppImage"
       ],
-      "synopsis": "A small synopsis of your game",
-      "description": "A more detailed description of your game"
+      "synopsis": "Welcome to the corporation!",
+      "description": "Is your first job, are strange things happening or is just a normal day at the office?"
     },
     "icon": "assets/icons/512x512.png"
   },
@@ -41,7 +41,8 @@
     "build:mac": "build -m",
     "build:linux": "build -l",
     "build:web": "parcel build index.html",
-    "build:github": "parcel build index.html --public-url ./ --out-dir ../docs"
+    "build:github": "parcel build index.html --public-url ./ --out-dir ../docs",
+    "publish:itch": "butler push exp fsvieira/the-corporation:html5"
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
