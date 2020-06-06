@@ -48,7 +48,7 @@
     "build:linux": "electron-builder -l",
     "build:web": "parcel build index.html",
     "build:github": "parcel build index.html --public-url ./ --out-dir ../docs",
-    "publish:itch": "butler push exp fsvieira/the-corporation:html5"
+    "publish:itch": "butler push ../docs fsvieira/the-corporation:html5"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
