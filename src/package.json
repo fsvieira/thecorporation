@@ -47,7 +47,8 @@
     "build:mac": "electron-builder -m",
     "build:linux": "electron-builder -l",
     "build:web": "parcel build index.html",
-    "build:github": "parcel build index.html --public-url ./ --out-dir ../docs",
+    "broken:build:github": "parcel build index.html --public-url ./ --out-dir ../docs",
+    "build:github": "cp assets engine favicon.ico index.html js manifest.json robots.txt service-worker.js style ../docs -rf",
     "publish:itch": "butler push ../docs fsvieira/the-corporation:html5"
   },
   "devDependencies": {

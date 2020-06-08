@@ -1,1 +1,0 @@
-{"version":3,"sources":["js/storage.js"],"names":["monogatari","storage","player","name"],"mappings":";AAGAA,WAAWC,QAAS,CACnBC,OAAQ,CACPC,KAAM","file":"storage.64bfed67.js","sourceRoot":"../src","sourcesContent":["/* global monogatari */\n\n// Persistent Storage Variable\nmonogatari.storage ({\n\tplayer: {\n\t\tname: ''\n\t}\n});"]}
