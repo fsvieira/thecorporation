@@ -11,4 +11,5 @@ An interactive graphic novel made with [Monogatari](https://github.com/Monogatar
     * contribute to [Opengameart](https://opengameart.org/users/fsvieira),
     * and make a fun game/story and have lots of fun doing it.
 
-
+# Art 
+All of my artwork will be CC0 license, this would be all drawings. I will also put it on opengame art as soon as possible. 
