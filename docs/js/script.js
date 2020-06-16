@@ -1,7 +1,7 @@
 /* global monogatari */
 
 // Define the messages used in the game.
-monogatari.action ('Message').messages ({
+monogatari.action('Message').messages({
 	'Help': {
 		title: 'Help',
 		subtitle: 'Some useful Links',
@@ -13,7 +13,7 @@ monogatari.action ('Message').messages ({
 });
 
 // Define the notifications used in the game
-monogatari.action ('Notification').notifications ({
+monogatari.action('Notification').notifications({
 	'Welcome': {
 		title: 'Welcome',
 		body: 'This is the Monogatari VN Engine',
@@ -22,42 +22,42 @@ monogatari.action ('Notification').notifications ({
 });
 
 // Define the Particles JS Configurations used in the game
-monogatari.action ('Particles').particles ({
+monogatari.action('Particles').particles({
 
 });
 
 // Define the music used in the game.
-monogatari.assets ('music', {
+monogatari.assets('music', {
 
 });
 
 // Define the voice files used in the game.
-monogatari.assets ('voice', {
+monogatari.assets('voice', {
 
 });
 
 // Define the sounds used in the game.
-monogatari.assets ('sound', {
+monogatari.assets('sound', {
 
 });
 
 // Define the videos used in the game.
-monogatari.assets ('video', {
+monogatari.assets('video', {
 
 });
 
 // Define the images used in the game.
-monogatari.assets ('images', {
+monogatari.assets('images', {
 	lobbyBalcony: "balcony.png"
 });
 
 
 // Define the backgrounds for each scene.
-monogatari.assets ('scenes', {
+monogatari.assets('scenes', {
 	lobby: "lobby.png",
-	bossOffice: "boss-office.png"
+	bossOffice: "meeting_room.png"
 });
-	 
+
 // Colors,
 const colorNavy = "#001f3f";
 const colorBlue = "#0074D9";
@@ -67,11 +67,11 @@ const colorOlive = "#3D9970";
 const colorGreen = "#2ECC40";
 const colorLime = "#01FF70";
 const colorYellow = "#FFDC00";
-	 
+
 
 // Define the Characters
 // Define the Characters
-monogatari.characters ({
+monogatari.characters({
 	/*
 	'y': {
 		'Name': 'Yui',
@@ -80,7 +80,7 @@ monogatari.characters ({
 	"brain": {
 		"Name": "Your Brain!",
 		"Color": colorYellow,
-		"Images":{ // Images Identifier for the "Show" statement.
+		"Images": { // Images Identifier for the "Show" statement.
 			"Normal": "raquel.png",
 		},
 		"Side": {
@@ -92,7 +92,7 @@ monogatari.characters ({
 	"you": {
 		"Name": "You",
 		"Color": colorBlue,
-		"Images":{ // Images Identifier for the "Show" statement.
+		"Images": { // Images Identifier for the "Show" statement.
 			"Normal": "animegirlatbeach.png",
 		},
 		"Side": {
@@ -103,7 +103,7 @@ monogatari.characters ({
 	"raquel": {
 		"Name": "Raquel",
 		"Color": colorAqua,
-		"Images":{ // Images Identifier for the "Show" statement.
+		"Images": { // Images Identifier for the "Show" statement.
 			"Normal": "raquel.png",
 		},
 		"Side": {
