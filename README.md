@@ -5,11 +5,11 @@ It's your first job, will you get it? Of course you are the best at doing things
 
 # Links
 
-Twitter: https://twitter.com/fsanvie
-Mastodon: https://socel.net/@fsvieira
-Webpage: https://fsvieira.github.io/
-Itch: https://fsvieira.itch.io/
-Opengameart: https://opengameart.org/users/fsvieira
+ * Twitter: https://twitter.com/fsanvie
+ * Mastodon: https://socel.net/@fsvieira
+ * Webpage: https://fsvieira.github.io/
+ * Itch: https://fsvieira.itch.io/
+ * Opengameart: https://opengameart.org/users/fsvieira
 
 ## Game Engine
 
