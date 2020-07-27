@@ -5,7 +5,7 @@ monogatari.script({
 	"Start": [
 		// "show scene lobby with fadeIn",
 		"show scene lobby with fadeIn",
-		"show character raquel Normal right with fadeIn",
+		"show character raquel Normal center with fadeIn",
 		// "particles Snow",
 		"raquel:Normal Hi, how can I help you mister...?",
 		{
