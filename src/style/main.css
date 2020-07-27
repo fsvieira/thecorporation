@@ -116,8 +116,8 @@ button:hover {
 
 /* Character Images Styles */
 [data-screen="game"] [data-character] {
-	max-height: 70%;
-
+	/* max-height: 70%; */
+	height: 97%;
 }
 
 /* Other Images Styles */
