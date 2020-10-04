@@ -16,13 +16,13 @@ monogatari.script({
 				"Dialog": "brain:Normal I don't know what they do, and what I am supposed to do, what should I say?",
 				"TeamPlayer": {
 					"Text": "I am a team player!",
-					"Do": "jump FriendGuy"
+					"Do": "jump TeamPlayerGuy"
 				},
-				"ComputerGuy": {
+				"FunnyGuy": {
 					"Text": "I know computers, email sending/reciving, write documents, spreadsheet, powerpoint, charts, piecharts...",
 					"Do": "jump FunnyGuy"
 				},
-				"Hardworker": {
+				"HardworkerGuy": {
 					"Text": "I am persistent and hard worker, I may not be the best but I always do my best.",
 					"Do": "jump HardworkerGuy"
 				},
@@ -37,20 +37,165 @@ monogatari.script({
 			}
 		}
 	],
-	"FriendGuy": [
-		"boss:Normal Sorry, game is still in developement, please leave a comment!!"
+	"TeamPlayerGuy": [
+		() => {
+			monogatari.storage({
+				player: {
+					herd: 1,
+					ant: 1
+				}
+			});
+
+			return true;
+		},
+		"boss:Normal Ah, I'm happy to know that. Here we are as a family, trusting each other is the most important thing!!",
+		"jump InterviewYourDegree"
 	],
 	"FunnyGuy": [
-		"boss:Normal Sorry, game is still in developement, please leave a comment!!"
+		() => {
+			monogatari.storage({
+				player: {
+					careless: 1,
+					dog: 1
+				}
+			});
+
+			return true;
+		},
+		"boss:Normal Lol, I like your spirit, you will fit easily here. We are all about having fun!!",
+		"jump InterviewYourDegree"
 	],
 	"HardworkerGuy": [
-		"boss:Normal Sorry, game is still in developement, please leave a comment!!"
+		() => {
+			monogatari.storage({
+				player: {
+					follower: 1,
+					bee: 1
+				}
+			});
+
+			return true;
+		},
+		"boss:Normal I'm glad to know that, we here value and reward the commitment and loyalty of our employees.",
+		"jump InterviewYourDegree"
 	],
 	"AmbitiousGuy": [
-		"boss:Normal Sorry, game is still in developement, please leave a comment!!"
+		() => {
+			monogatari.storage({
+				player: {
+					greedy: 1,
+					wolf: 1
+				}
+			});
+
+			return true;
+		},
+		"boss:Normal oh, exactly what we are looking for, and here there is no lack of opportunities for those who want to earn a lot of money!!",
+		"jump InterviewYourDegree"
 	],
 	"HonestGuy": [
-		"boss:Normal Sorry, game is still in developement, please leave a comment!!"
+		() => {
+			monogatari.storage({
+				player: {
+					honest: 1,
+					sheep: 1
+				}
+			});
+
+			return true;
+		},
+		"boss:Normal I really appreciate your honesty, trust within the company is of great importance.",
+		"jump InterviewYourDegree"
+	],
+	"InterviewYourDegree": [
+		"boss:Normal So I know you have a degree in ...",
+		{
+			'Input': {
+				'Text': 'What is your degree?',
+				'Validation': function (input) {
+					return input.trim().length > 0;
+				},
+				'Save': function (input) {
+					this.storage({
+						player: {
+							degree: input
+						}
+					});
+					return true;
+				},
+				'Revert': function () {
+					this.storage({
+						player: {
+							degree: ''
+						}
+					});
+				},
+				'Warning': 'You must enter a degree!'
+			}
+		},
+		"boss:Normal Ah, I have a great knowledge of {{player.degree}}, but in my time it was old school we only used pen and paper, but today everyone uses a computer, today's kids have no knowledge of things.",
+		"show image logo with fadeIn",
+		"boss:Normal I'm a self-taught person I did the company logo myself, what do you think?",
+		"you:Normal Wow, did you do it all on paper?",
+		"boss:Normal Offcourse not, I did it on the computer.",
+		{
+			"Choice": {
+				"Dialog": "brain:Normal This logo is crap!! What do I say?",
+				"FunnyTeamPlayerGuy": {
+					"Text": "I wouldn't do better, for sure.",
+					"Do": "jump LogoFunnyTeamPlayerGuy"
+				},
+				"AmbitiousGuy": {
+					"Text": "Amazing that you did everything yourself, you are a top designer.",
+					"Do": "jump LogoAmbitiousGuy"
+				},
+				"HonestGuy": {
+					"Text": "Great work!! Maybe a designer could improve it.",
+					"Do": "jump LogoHonestGuy"
+				}
+			}
+		}
+	],
+	"LogoFunnyTeamPlayerGuy": [
+		() => {
+			monogatari.storage({
+				player: {
+					herd: 1,
+					careless: 1,
+					ant: 1,
+					dog: 1
+				}
+			});
+
+			return true;
+		},
+		"boss:Normal SORRY GAME STILL IN DEVELOPMENT"
+	],
+	"LogoAmbitiousGuy": [
+		() => {
+			monogatari.storage({
+				player: {
+					greedy: 1,
+					wolf: 1
+				}
+			});
+
+			return true;
+		},
+		"boss:Normal SORRY GAME STILL IN DEVELOPMENT"
+	],
+	"LogoHonestGuy": [
+		() => {
+			monogatari.storage({
+				player: {
+					honest: 1,
+					sheep: 1
+				}
+			});
+
+			return true;
+		},
+		"boss:Normal SORRY GAME STILL IN DEVELOPMENT"
 	]
 });
 

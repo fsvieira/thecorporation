@@ -48,7 +48,8 @@ monogatari.assets('video', {
 
 // Define the images used in the game.
 monogatari.assets('images', {
-	lobbyBalcony: "balcony.png"
+	lobbyBalcony: "balcony.png",
+	logo: "logo.png"
 });
 
 
