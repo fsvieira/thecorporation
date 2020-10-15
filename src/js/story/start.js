@@ -1,5 +1,14 @@
 "use strict";
 
+/** Personality
+	honest: 0,
+	greedy: 0,
+	follower: 0,
+	easygoing: 0,
+	herd: 0
+*/
+
+
 // The game starts here.
 monogatari.script({
 	"Start": [
@@ -17,7 +26,12 @@ monogatari.script({
 				'Save': function (input) {
 					this.storage({
 						player: {
-							name: input
+							name: input,
+							honest: 0,
+							greedy: 0,
+							follower: 0,
+							easygoing: 0,
+							herd: 0
 						}
 					});
 					return true;
@@ -64,16 +78,24 @@ monogatari.script({
 		() => {
 			// How to get storage stuff ?? 
 			monogatari.storage({
-				caracters: {
-					raquel: {
-						player: {
-							love: 2
-						}
+				raquel: {
+					player: {
+						honest: 1,
+						greedy: 1,
+						follower: 0,
+						easygoing: 1,
+						herd: 0,
+						actions: []
 					}
 				},
 				player: {
 					raquel: {
-						love: 3
+						honest: 1,
+						greedy: 0,
+						follower: 0,
+						easygoing: 1,
+						herd: 0,
+						actions: ["Coffee"]
 					}
 				}
 			});
@@ -90,16 +112,24 @@ monogatari.script({
 	"StartAskLunch": [
 		() => {
 			monogatari.storage({
-				caracters: {
-					raquel: {
-						player: {
-							love: -1
-						}
-					},
+				raquel: {
 					player: {
-						raquel: {
-							love: 2
-						}
+						honest: -1,
+						greedy: 1,
+						follower: 0,
+						easygoing: -1,
+						herd: 0,
+						actions: []
+					}
+				},
+				player: {
+					raquel: {
+						honest: -1,
+						greedy: 0,
+						follower: 0,
+						easygoing: -1,
+						herd: 0,
+						actions: []
 					}
 				}
 			});
@@ -116,16 +146,24 @@ monogatari.script({
 	"StartAskDate": [
 		() => {
 			monogatari.storage({
-				caracters: {
-					raquel: {
-						player: {
-							love: -2
-						}
-					},
+				raquel: {
 					player: {
-						raquel: {
-							love: 1
-						}
+						honest: -2,
+						greedy: 2,
+						follower: 0,
+						easygoing: -1,
+						herd: 2,
+						actions: []
+					}
+				},
+				player: {
+					raquel: {
+						honest: 2,
+						greedy: 0,
+						follower: 0,
+						easygoing: -1,
+						herd: 1,
+						actions: []
 					}
 				}
 			});
