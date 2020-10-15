@@ -232,24 +232,7 @@ monogatari.script({
 		},
 		"boss:Normal {{message}}",
 		"you:Normal Yes, offcourse!! Thank you for the opportunity!",
-		{
-			'Conditional': {
-				'Condition': function () {
-					debugger;
-					const actions = monogatari.storage().player.raquel.actions;
-					console.log(actions);
-					return actions[actions.length - 1] || "Nothing";
-				},
-				'Coffee': 'jump RaquelFirstCoffee',
-				'Nothing': 'jump FirstDay'
-			}
-		}
-	],
-	"RaquelFirstCoffee": [
-		"raquel:Normal Coffeeeeeeeeeeeee!!!"
-	],
-	"FirstDay": [
-		"you:Normal My First DAYYYYYYY!!"
+		"jump AfterTheInterview"
 	]
 });
 
