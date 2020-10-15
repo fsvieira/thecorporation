@@ -1,5 +1,11 @@
 "use strict";
 
+/**
+	greedy
+	honest
+	easygoing -- follower -- herd  
+*/
+
 monogatari.script({
 	"Interview": [
 		"show scene bossOffice with fadeIn",
@@ -41,8 +47,8 @@ monogatari.script({
 		() => {
 			monogatari.storage({
 				player: {
-					herd: 1,
-					ant: 1
+					follower: monogatari.storage().player.follower + 1,
+					herd: monogatari.storage().player.herd + 2
 				}
 			});
 
@@ -55,8 +61,7 @@ monogatari.script({
 		() => {
 			monogatari.storage({
 				player: {
-					careless: 1,
-					dog: 1
+					easygoing: monogatari.storage().player.easygoing + 1,
 				}
 			});
 
@@ -69,8 +74,7 @@ monogatari.script({
 		() => {
 			monogatari.storage({
 				player: {
-					follower: 1,
-					bee: 1
+					follower: monogatari.storage().player.follower + 1
 				}
 			});
 
@@ -83,8 +87,7 @@ monogatari.script({
 		() => {
 			monogatari.storage({
 				player: {
-					greedy: 1,
-					wolf: 1
+					greedy: monogatari.storage().player.greedy + 1
 				}
 			});
 
@@ -97,8 +100,7 @@ monogatari.script({
 		() => {
 			monogatari.storage({
 				player: {
-					honest: 1,
-					sheep: 1
+					honest: monogatari.storage().player.honest + 1
 				}
 			});
 
@@ -160,42 +162,77 @@ monogatari.script({
 		() => {
 			monogatari.storage({
 				player: {
-					herd: 1,
-					careless: 1,
-					ant: 1,
-					dog: 1
+					herd: monogatari.storage().player.herd + 1,
+					easygoing: monogatari.storage().player.easygoing + 1
 				}
 			});
 
 			return true;
 		},
-		"boss:Normal SORRY GAME STILL IN DEVELOPMENT"
+		"jump HireThisGuy"
 	],
 	"LogoAmbitiousGuy": [
 		() => {
 			monogatari.storage({
 				player: {
-					greedy: 1,
-					wolf: 1
+					greedy: monogatari.storage().player.greedy + 1
 				}
 			});
 
 			return true;
 		},
-		"boss:Normal SORRY GAME STILL IN DEVELOPMENT"
+		"jump HireThisGuy"
 	],
 	"LogoHonestGuy": [
 		() => {
 			monogatari.storage({
 				player: {
-					honest: 1,
-					sheep: 1
+					honest: monogatari.storage().player.honest + 1
 				}
 			});
 
 			return true;
 		},
-		"boss:Normal SORRY GAME STILL IN DEVELOPMENT"
+		"jump HireThisGuy"
+	],
+	"HireThisGuy": [
+		{
+			'Function': {
+				'Apply': () => {
+					let s = "";
+
+					if (monogatari.storage().player.herd > 0) {
+						s += "I think you will be a great fit for our prime team.\n";
+					}
+
+					if (monogatari.storage().player.greedy > 0) {
+						s += "Lets make money.";
+					}
+
+					if (monogatari.storage().player.follower > 0) {
+						s += "With our guidance, you will surely overcome the most difficult challenges and achieve great things.\n";
+					}
+
+
+					if (monogatari.storage().player.honest > 0) {
+						s += "I think you will be a great fit for our prime team.\n";
+					}
+
+					if (monogatari.storage().player.easygoing > 0) {
+						s += "You will feel here like a fish in the water, just follow the flow and good things will come.\n";
+					}
+
+
+					s += "You are hired, can you start tomorrow?"
+
+					monogatari.storage().message = s;
+				},
+				'Revert': () => { }
+			}
+		},
+		"boss:Normal {{message}}",
+		"you:Normal Yes, offcourse!! Thank you for the opportunity!",
+		"jump AfterTheInterview"
 	]
 });
 

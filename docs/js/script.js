@@ -56,7 +56,8 @@ monogatari.assets('images', {
 // Define the backgrounds for each scene.
 monogatari.assets('scenes', {
 	lobby: "lobby.png",
-	bossOffice: "meeting_room.png"
+	bossOffice: "meeting_room.png",
+	hallway: "hallway.png"
 });
 
 // Colors,
@@ -120,6 +121,18 @@ monogatari.characters({
 		},
 		"Side": {
 			"Normal": "boss/boss.png"
+		}
+	},
+	"sofia": {
+		"Name": "Sofia",
+		"Color": colorOlive,
+		"Images": {
+			"Normal": "sofia.png",
+			"Happy": "sofia.png"
+		},
+		"Side": {
+			"Normal": "sofia.png",
+			"Happy": "sofia.png"
 		}
 	}
 });
