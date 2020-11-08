@@ -97,12 +97,12 @@ button:hover {
 
 /* Text Box styling */
 [data-component="text-box"] {
-
+	background: rgb(17,102,103);
+	background: linear-gradient(148deg, rgba(17,102,103,0.8) 0%, rgba(121,9,102,0.8) 71%, rgba(0,255,1,0.8) 100%);
 }
 
 /* Character Name Style */
 [data-ui="who"] {
-
 }
 
 /* Style for Centered Text */
